@@ -3,227 +3,277 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mrunal — Creative Portfolio</title>
-<meta name="description" content="Creative portfolio of Mrunal, social media manager. Posts, reels and client demos for Cafe Uukii, Epic Burger, AURÉLA and Your Deli.">
+<title>Mrunal — Social Media Manager & Creative</title>
+<meta name="description" content="Mrunal plans, designs and writes social content for food, lifestyle and skincare brands.">
+<meta property="og:title" content="Mrunal — Social Media Manager & Creative">
+<meta property="og:description" content="Social content for food, lifestyle and skincare brands — from brief to finished post.">
+<meta property="og:image" content="assets/img/hero/h01.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23ff9ee4' d='M50 0C57 34 66 43 100 50C66 57 57 66 50 100C43 66 34 57 0 50C34 43 43 34 50 0Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Londrina+Solid:wght@400;900&family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Momo+Signature&family=Anton&family=Sofia+Sans+Extra+Condensed:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/hero/h01.jpg">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- cut-paper shapes reused across the page -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="burst" viewBox="0 0 100 100">
-      <polygon points="50,0 58,28 80,8 72,34 100,30 78,48 98,66 72,64 80,92 58,72 48,100 40,72 16,90 26,64 0,62 22,48 2,26 28,32 22,6 42,26"/>
-    </symbol>
-    <symbol id="squiggle" viewBox="0 0 110 56">
-      <path d="M6 34 C12 4 36 2 30 24 S12 50 32 44 S56 6 62 24 S50 52 70 44 S94 12 104 22" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="rays" viewBox="0 0 60 50">
-      <path d="M8 30 L20 38 M26 8 L32 24 M52 12 L44 28" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="whatsapp" viewBox="0 0 32 32">
-      <path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
-      <path d="M11.3 10.4c.5-.5 1.3-.4 1.7.2l1.2 1.9c.3.5.2 1.1-.2 1.500l-.7.7c.9 1.7 2.3 3.1 4 4l.7-.7c.4-.4 1-.5 1.5-.2l1.9 1.200c.6.4.7 1.2.2 1.700l-.8.8c-.9.9-2.2 1.2-3.4.8-4-1.4-7.2-4.6-8.6-8.6-.4-1.2-.1-2.5.8-3.400z" fill="currentColor"/>
-    </symbol>
-    <symbol id="instagram" viewBox="0 0 32 32">
-      <rect x="4" y="4" width="24" height="24" rx="7" fill="none" stroke="currentColor" stroke-width="2.6"/>
-      <circle cx="16" cy="16" r="5.5" fill="none" stroke="currentColor" stroke-width="2.6"/>
-      <circle cx="23" cy="9" r="1.7" fill="currentColor"/>
-    </symbol>
-  </defs>
-</svg>
-
-<header class="nav">
-  <a class="logo" href="#top">mrunal</a>
-  <nav>
-    <a href="#hello">Hello</a>
-    <a href="#work">Work</a>
-    <a href="#skills">What I do</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- ───────────── NAV ───────────── -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#top" aria-label="Mrunal — home">mrunal</a>
+  <div class="menu" id="menu">
+    <button class="menu__btn" id="menuBtn" aria-expanded="false" aria-controls="menuList" aria-label="Open menu"><span class="menu__dot"></span></button>
+    <nav class="menu__list" id="menuList" aria-label="Main">
+      <a href="#top">home</a>
+      <a href="#about">about</a>
+      <a href="#work">projects</a>
+      <a href="#services">services</a>
+      <a href="#contact">contact</a>
+    </nav>
+  </div>
 </header>
 
-<main id="top">
+<main id="smooth">
 
-<!-- ============ HERO ============ -->
-<section class="hero paper">
-  <svg class="doodle d1" aria-hidden="true"><use href="#squiggle"/></svg>
-  <svg class="doodle d2" aria-hidden="true"><use href="#squiggle"/></svg>
+<!-- ───────────── HERO ───────────── -->
+<section class="hero" id="top">
+  <div class="hero__card">
+    <div class="hero__blur" id="heroBlur"></div>
+    <canvas class="hero__gl" id="heroGL" aria-hidden="true"></canvas>
 
-  <div class="hero-copy">
-    <p class="label">Mrunal · Social Media Manager</p>
-    <h1 class="cut" aria-label="Creative Portfolio">Creative Portfolio</h1>
-    <p class="lede">I plan, design and write social content for food, lifestyle and skincare
-    brands. Six projects below, each with its Figma file.</p>
-    <a class="btn" href="#work">See my work</a>
-  </div>
+    <h1 class="wordmark parallax" data-speed="-0.1" aria-label="Mrunal">
+      <span class="wordmark__inner reveal-letters" data-text="mrunal"></span>
+    </h1>
 
-  <div class="hero-art">
-    <svg class="shape hero-burst" aria-hidden="true"><use href="#burst"/></svg>
-    <svg class="doodle rays" aria-hidden="true"><use href="#rays"/></svg>
-    <img class="cutout" src="assets/me/mrunal-pose-cutout.png" alt="Mrunal striking a playful pose">
+    <div class="stamps" id="stamps" aria-hidden="false"></div>
+
+    <div class="thumbs" id="thumbs" role="tablist" aria-label="Photos"></div>
   </div>
 </section>
 
-<!-- ============ HELLO ============ -->
-<section class="hello paper" id="hello">
-  <div class="hello-copy">
-    <h2 class="cut" aria-label="Hello, I'm Mrunal">Hello, I'm Mrunal</h2>
-    <p>Bold type, good food, a little bit of chaos, and captions that sound like a person
-    wrote them. I take a brand from brief to finished post: the idea, the design in Figma
-    and the words that go with it.</p>
-  </div>
-  <div class="hello-art">
-    <svg class="doodle d3" aria-hidden="true"><use href="#squiggle"/></svg>
-    <div class="blob"><img src="assets/me/mrunal-smile-cutout.png" alt="Mrunal smiling"></div>
-    <svg class="shape hello-burst" aria-hidden="true"><use href="#burst"/></svg>
-  </div>
-</section>
-
-<!-- ============ WORK ============ -->
-<section class="work paper" id="work">
-  <svg class="shape work-burst" aria-hidden="true"><use href="#burst"/></svg>
-  <svg class="doodle d4" aria-hidden="true"><use href="#squiggle"/></svg>
-  <h2 class="cut big" aria-label="My Work">My Work</h2>
-
-  <!-- Your Deli -->
-  <div class="group-head">
-    <p class="label">Client demo</p>
-    <h3>Your Deli — three posts, built to the client's brief</h3>
-  </div>
-  <div class="cards">
-    <article class="card r1">
-      <button class="shot" data-full="assets/work/your-deli-big-sip.jpg"><img src="assets/work/your-deli-big-sip.jpg" alt="Your Deli post: Go on, take a big sip. Iced hazelnut cold brew." loading="lazy"></button>
-      <h4>Go on, take a big sip</h4>
-      <p>Drink launch post</p>
-      <a class="figma" href="https://www.figma.com/design/BOvdufWdNk09lsXKdH7FeQ/Your-Deli-%E2%80%93-Big-Sip-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
-    </article>
-    <article class="card r2">
-      <button class="shot" data-full="assets/work/your-deli-come-hungry.jpg"><img src="assets/work/your-deli-come-hungry.jpg" alt="Your Deli post: Come hungry. Pull up a chair, open till late." loading="lazy"></button>
-      <h4>Come hungry</h4>
-      <p>Brand hero post</p>
-      <a class="figma" href="https://www.figma.com/design/wJowNoxUanJiwmxpd2x99O/Your-Deli-%E2%80%93-Come-Hungry-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
-    </article>
-    <article class="card r3">
-      <button class="shot" data-full="assets/work/your-deli-hold-the-napkins.jpg"><img src="assets/work/your-deli-hold-the-napkins.jpg" alt="Your Deli post: Hold the napkins. Extra saucy, get messy." loading="lazy"></button>
-      <h4>Hold the napkins</h4>
-      <p>Burger promo post</p>
-      <a class="figma" href="https://www.figma.com/design/pSrAciupu6MvFk0HcNcUGS/Your-Deli-%E2%80%93-Hold-the-Napkins-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
-    </article>
-  </div>
-
-  <!-- Cafe Uukii -->
-  <div class="feature">
-    <article class="card r2">
-      <button class="shot" data-full="assets/work/cafe-uukii-ube-latte.jpg"><img src="assets/work/cafe-uukii-ube-latte.jpg" alt="Cafe Uukii ube latte post: Purple mood, all day long. Made with real ube." loading="lazy"></button>
-    </article>
-    <div class="feature-copy">
-      <p class="label">Café</p>
-      <h3 class="cut" aria-label="Cafe Uukii">Cafe Uukii</h3>
-      <p>Ube Latte launch post. Purple mood, all day long: one drink, one colour and
-      stickers that do the talking.</p>
-      <a class="figma" href="https://www.figma.com/design/s8g0Hib00Ihm2NqNK2C7wF/Cafe-Uukii-%E2%80%93-Ube-Latte" target="_blank" rel="noopener">Open in Figma ↗</a>
+<!-- ───────────── ABOUT ───────────── -->
+<section class="about" id="about">
+  <div class="about__pin" id="aboutPin">
+    <div class="about__sticky">
+      <div class="about__card">
+        <div class="about__stickers" id="aboutStickers" aria-hidden="true"></div>
+        <div class="about__bloom" id="aboutBloom">
+          <div class="about__content">
+            <div>
+              <span class="about__eyebrow">hi, i'm mrunal</span>
+              <p class="about__para" id="aboutPara">A social media manager who plans, designs and writes content for food, lifestyle and skincare brands. Bold type, good food, a little bit of chaos, and captions that sound like a person wrote them. I take a brand from brief to finished post.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <div class="about__after">
+    <div class="about__name">
+      <h2 class="script">Mrunal</h2>
+      <div class="avatar">
+        <svg class="avatar__badge" viewBox="0 0 100 100" aria-hidden="true"><path class="shape-scallop"/></svg>
+        <img src="assets/img/avatar.jpg" alt="Portrait of Mrunal" width="400" height="400" loading="lazy">
+        <span class="avatar__tag">social media manager</span>
+        <span class="avatar__tag avatar__tag--l">food lover ✦</span>
+      </div>
+      <h2 class="script">Desale</h2>
+    </div>
+    <div class="brands" id="brands" aria-label="Things Mrunal loves making"></div>
+  </div>
+</section>
 
-  <!-- AURELA -->
-  <div class="feature flip">
-    <article class="card r1">
-      <button class="shot" data-full="assets/work/aurela-rose-glow.jpg"><img src="assets/work/aurela-rose-glow.jpg" alt="AURÉLA Rose Glow face wash post: Your daily skin care partner." loading="lazy"></button>
+<!-- ───────────── PROJECTS ───────────── -->
+<section class="projects" id="work">
+  <h2 class="sr-only">Selected work</h2>
+  <div class="ticker" id="projectTicker">
+    <div class="ticker__track" id="projectTrack">
+      <article class="project" data-cat="Client|Demo">
+        <a class="project__card" href="https://www.figma.com/design/wJowNoxUanJiwmxpd2x99O/Your-Deli-%E2%80%93-Come-Hungry-Post" target="_blank" rel="noopener">
+          <div class="project__img spread" style="--img:url(assets/work/your-deli-come-hungry.jpg)">
+            <img src="assets/work/your-deli-big-sip.jpg" alt="Your Deli — Go on, take a big sip post" loading="lazy">
+            <img src="assets/work/your-deli-come-hungry.jpg" alt="Your Deli — Come hungry post" loading="lazy">
+            <img src="assets/work/your-deli-hold-the-napkins.jpg" alt="Your Deli — Hold the napkins post" loading="lazy">
+          </div>
+          <div class="project__row"><h3>Your Deli</h3><span class="btn btn--dark">view project</span></div>
+        </a>
+      </article>
+      <article class="project" data-cat="Café|Launch">
+        <a class="project__card" href="https://www.figma.com/design/s8g0Hib00Ihm2NqNK2C7wF/Cafe-Uukii-%E2%80%93-Ube-Latte" target="_blank" rel="noopener">
+          <div class="project__img spread spread--one" style="--img:url(assets/work/cafe-uukii-ube-latte.jpg)">
+            <img src="assets/work/cafe-uukii-ube-latte.jpg" alt="Cafe Uukii — Ube Latte launch post" loading="lazy">
+          </div>
+          <div class="project__row"><h3>Cafe Uukii</h3><span class="btn btn--dark">view project</span></div>
+        </a>
+      </article>
+      <article class="project" data-cat="Skincare|Post">
+        <a class="project__card" href="https://www.figma.com/design/N7TmVXRrqTjHwSNT3miaLS/AUR%C3%89LA-%E2%80%93-Rose-Glow-Post" target="_blank" rel="noopener">
+          <div class="project__img spread spread--one" style="--img:url(assets/work/aurela-rose-glow.jpg)">
+            <img src="assets/work/aurela-rose-glow.jpg" alt="Aurela — Rose Glow face wash post" loading="lazy">
+          </div>
+          <div class="project__row"><h3>Aurela</h3><span class="btn btn--dark">view project</span></div>
+        </a>
+      </article>
+      <article class="project" data-cat="Reel|Storyboard">
+        <a class="project__card" href="https://www.figma.com/design/WKyUhhcJBljBTh0O6npkmw/Epic-Burger-%E2%80%93-Smash-Reel." target="_blank" rel="noopener">
+          <div class="project__img spread spread--reel" style="--img:url(assets/work/epic-burger-02-juicy-messy-epic.jpg)">
+            <img src="assets/work/epic-burger-01-smashed.jpg" alt="Epic Burger reel — scene 1" loading="lazy">
+            <img src="assets/work/epic-burger-02-juicy-messy-epic.jpg" alt="Epic Burger reel — scene 2" loading="lazy">
+            <img src="assets/work/epic-burger-03-double-patty.jpg" alt="Epic Burger reel — scene 3" loading="lazy">
+            <img src="assets/work/epic-burger-04-every-single-bite.jpg" alt="Epic Burger reel — scene 4" loading="lazy">
+            <img src="assets/work/epic-burger-05-end-card.jpg" alt="Epic Burger reel — end card" loading="lazy">
+          </div>
+          <div class="project__row"><h3>Epic Burger</h3><span class="btn btn--dark">view project</span></div>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── FOODIE ───────────── -->
+<section class="foodie" id="foodie">
+  <div class="foodie__inner">
+    <div class="foodie__copy">
+      <span class="foodie__kicker">for restaurants, cafés, bars &amp; hotels</span>
+      <h2 class="foodie__title">Will work<br>for <em>sushi.</em></h2>
+      <p class="foodie__text">I'm a food lover first. I know the bite, the drip and the moment that make people stop scrolling and book a table, so your menu gets to be the main character.</p>
+      <ul class="foodie__chips">
+        <li>menu launches</li><li>food reels</li><li>table-booking hooks</li><li>drool-worthy captions</li>
+      </ul>
+      <a class="btn btn--pink btn--shadow-dark foodie__cta" href="#contact">Feed me your brief</a>
+    </div>
+    <div class="foodie__stage" id="foodieStage">
+      <div class="ring ring--back" data-ring="a" aria-hidden="true"></div>
+      <div class="ring ring--back" data-ring="b" aria-hidden="true"></div>
+      <figure class="foodie__photo">
+        <img src="assets/img/foodie.jpg" alt="Mrunal leaning in to a plate of sushi on a pink table" loading="lazy" width="1672" height="941">
+      </figure>
+      <div class="ring ring--front" data-ring="a" aria-hidden="true"></div>
+      <div class="ring ring--front" data-ring="b" aria-hidden="true"></div>
+      <div class="foodie__badge" aria-hidden="true">
+        <svg viewBox="0 0 100 100"><path class="shape-burst-badge"/></svg>
+        <span>certified<br><b>sushi</b><br>lover</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────── SERVICES ───────────── -->
+<section class="services" id="services">
+  <div class="services__sticky">
+    <h2 class="giant wave-text" data-base="#f2edc7" data-fill="#ff9ee4">services</h2>
+    <canvas class="star3d" id="star3d" aria-hidden="true"></canvas>
+  </div>
+  <div class="services__cards">
+    <article class="svc swing" data-rot="-30">
+      <h3>Content Strategy</h3>
+      <p>Monthly calendars, content pillars and a plan for what goes out when.</p>
+      <div class="tags" data-tags="Calendars|Content Pillars|Trends|Planning|Research|Hooks"></div>
     </article>
-    <div class="feature-copy">
-      <p class="label">Skincare</p>
-      <h3 class="cut" aria-label="Aurela">Aurela</h3>
-      <p>Rose Glow face wash post. "Your daily skin care partner", set in pink type on
-      a pink cream texture so the product sits right in the middle of it.</p>
-      <a class="figma" href="https://www.figma.com/design/N7TmVXRrqTjHwSNT3miaLS/AUR%C3%89LA-%E2%80%93-Rose-Glow-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
+    <article class="svc swing" data-rot="30">
+      <h3>Post &amp; Reel Design</h3>
+      <p>Statics, carousels and reel storyboards, designed in Figma to your brand.</p>
+      <div class="tags" data-tags="Figma|Carousels|Statics|Reels|Storyboards|Type"></div>
+    </article>
+    <article class="svc swing" data-rot="-30">
+      <h3>Captions &amp; Copy</h3>
+      <p>Hooks, captions and calls to action in a voice that sounds like you.</p>
+      <div class="tags" data-tags="Hooks|Captions|CTAs|Brand Voice|Copy"></div>
+    </article>
+    <article class="svc swing" data-rot="30">
+      <h3>Client Demos</h3>
+      <p>Sample posts mocked up to your brief before you commit.</p>
+      <div class="tags" data-tags="Mockups|Briefs|Concepts|Pitches|Moodboards"></div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────────── ARCHIVE ───────────── -->
+<section class="archive" id="archive">
+  <div class="archive__head">
+    <h2 class="giant wave-text" data-base="#f2edc7" data-fill="#ff9ee4">archive</h2>
+  </div>
+  <div class="archive__scroll" id="archiveScroll">
+    <div class="archive__sticky">
+      <div class="archive__stack" id="archiveStack">
+        <figure class="arc" data-x="511" data-y="246" data-s=".6"><img src="assets/img/archive/arch-09.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="314" data-y="306" data-s=".5"><img src="assets/img/archive/arch-11.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="502" data-y="-211" data-s=".5"><img src="assets/img/archive/arch-06.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="297" data-y="-291" data-s=".55"><img src="assets/img/archive/arch-13.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="-346" data-y="257" data-s=".6"><img src="assets/img/archive/arch-07.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="-515" data-y="328" data-s=".6"><img src="assets/img/archive/arch-21.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="-498" data-y="-211" data-s=".6"><img src="assets/img/archive/arch-gems.jpg" alt="" loading="lazy"></figure>
+        <figure class="arc" data-x="-266" data-y="-179" data-s=".6"><img src="assets/img/archive/arch-01.jpg" alt="" loading="lazy"></figure>
+        <a class="arc arc--front" href="https://www.instagram.com/mrunaldesale_" target="_blank" rel="noopener">
+          <img src="assets/img/archive/arch-16.jpg" alt="Mrunal in a floral crop top on a pink backdrop" loading="lazy">
+          <span class="arc__follow"><small>Follow me on</small>Instagram</span>
+          <span class="btn btn--pink arc__handle">@mrunaldesale_</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Epic Burger -->
-<section class="reel paper">
-  <svg class="doodle d5" aria-hidden="true"><use href="#squiggle"/></svg>
-  <div class="reel-head">
-    <div>
-      <p class="label light">Reel</p>
-      <h3 class="cut" aria-label="Epic Burger">Epic Burger</h3>
-    </div>
-    <div>
-      <p>Smash Reel: five scenes that go from the grill to the order button.</p>
-      <a class="figma light" href="https://www.figma.com/design/WKyUhhcJBljBTh0O6npkmw/Epic-Burger-%E2%80%93-Smash-Reel." target="_blank" rel="noopener">Open in Figma ↗</a>
-    </div>
+<!-- ───────────── CONTACT ───────────── -->
+<section class="contact" id="contact">
+  <div class="pricing fade-up">
+    <p class="pricing__title">Social Content, Captions &amp; Reels for Food, Lifestyle &amp; Skincare Brands</p>
+    <p class="pricing__sub">Taking on new brands now</p>
+    <a class="btn btn--pink btn--shadow-dark" href="https://api.whatsapp.com/send?phone=919834380461&text=Hi%20Mrunal!%20I%27d%20like%20to%20talk%20about%20working%20together%20on%20my%20brand%27s%20social%20media." target="_blank" rel="noopener">Available to Hire</a>
   </div>
-  <div class="frames">
-    <button class="shot" data-full="assets/work/epic-burger-01-smashed.jpg"><img src="assets/work/epic-burger-01-smashed.jpg" alt="Epic Burger reel scene 1: Smashed, fresh on the grill." loading="lazy"><span>01</span></button>
-    <button class="shot" data-full="assets/work/epic-burger-02-juicy-messy-epic.jpg"><img src="assets/work/epic-burger-02-juicy-messy-epic.jpg" alt="Epic Burger reel scene 2: Juicy. Messy. Epic." loading="lazy"><span>02</span></button>
-    <button class="shot" data-full="assets/work/epic-burger-03-double-patty.jpg"><img src="assets/work/epic-burger-03-double-patty.jpg" alt="Epic Burger reel scene 3: Double patty. Double cheese." loading="lazy"><span>03</span></button>
-    <button class="shot" data-full="assets/work/epic-burger-04-every-single-bite.jpg"><img src="assets/work/epic-burger-04-every-single-bite.jpg" alt="Epic Burger reel scene 4: Every. Single. Bite." loading="lazy"><span>04</span></button>
-    <button class="shot" data-full="assets/work/epic-burger-05-end-card.jpg"><img src="assets/work/epic-burger-05-end-card.jpg" alt="Epic Burger reel end card: Best smash burgers in Pune, order on Zomato." loading="lazy"><span>05</span></button>
+  <div class="formcard">
+    <div class="formcard__head">
+      <p class="formcard__title">Say Hello and Tell Me What You're Working On.</p>
+      <p class="formcard__sub">Send the brief — I reply on WhatsApp or email.</p>
+    </div>
+    <form class="form" id="contactForm">
+      <label><span>Name</span><input name="name" placeholder="Your name" required autocomplete="name"></label>
+      <label><span>Email</span><input name="email" type="email" placeholder="you@brand.com" autocomplete="email"></label>
+      <label><span>Brand</span><input name="brand" placeholder="Brand or business name"></label>
+      <label><span>Platform</span><input name="platform" placeholder="Instagram, Reels, LinkedIn…"></label>
+      <label class="form__wide"><span>What do you need?</span><input name="msg" placeholder="A month of posts, a launch, a reel…" required></label>
+      <button class="btn btn--submit" type="submit">Start a project with me</button>
+    </form>
   </div>
 </section>
 
-<!-- ============ SKILLS ============ -->
-<section class="skills paper" id="skills">
-  <svg class="shape skills-burst" aria-hidden="true"><use href="#burst"/></svg>
-  <svg class="doodle d6" aria-hidden="true"><use href="#squiggle"/></svg>
-  <h2 class="cut big" aria-label="What I Do">What I Do</h2>
-  <div class="cols">
-    <div><h3>Content strategy</h3><p>Monthly calendars, content pillars and a plan for what goes out when.</p></div>
-    <div><h3>Post &amp; reel design</h3><p>Statics, carousels and reel storyboards, designed in Figma to your brand.</p></div>
-    <div><h3>Captions &amp; copy</h3><p>Hooks, captions and calls to action in a voice that sounds like you.</p></div>
-    <div><h3>Client demos</h3><p>Sample posts mocked up to your brief before you commit.</p></div>
+<!-- ───────────── FOOTER ───────────── -->
+<footer class="footer" id="footer">
+  <div class="footer__top">
+    <a class="footer__mail" href="mailto:mrunaldesale21@gmail.com">mrunaldesale21@gmail.com</a>
+    <div class="footer__social">
+      <a href="https://www.instagram.com/mrunaldesale_" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" class="fill"/></svg></a>
+      <a href="https://api.whatsapp.com/send?phone=919834380461" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"/><path d="M9 9.5c.3 2.2 2.3 4.2 4.5 4.6l1.2-1.1 1.6.8c-.3 1.2-1.3 1.8-2.4 1.6C10.8 15 8.9 13 8.5 10.6c-.2-1.1.4-2.1 1.6-2.4l.8 1.6z" class="fill"/></svg></a>
+      <a href="mailto:mrunaldesale21@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7l8 6 8-6"/></svg></a>
+      <a href="tel:+919834380461" aria-label="Call"><svg viewBox="0 0 24 24"><path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a3 3 0 0 1-3 3A16 16 0 0 1 3 6a3 3 0 0 1 3-3z"/></svg></a>
+    </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="#top">Home</a><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    </nav>
   </div>
-  <div class="strip"><img src="assets/me/mrunal-1.jpg" alt="Mrunal smiling at a restaurant table" loading="lazy"></div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<footer class="contact paper" id="contact">
-  <svg class="shape contact-burst" aria-hidden="true"><use href="#burst"/></svg>
-  <svg class="doodle d7" aria-hidden="true"><use href="#squiggle"/></svg>
-  <h2 class="cut big" aria-label="Let's Talk">Let's Talk</h2>
-  <p>Have a brand that needs a louder feed? Send me the brief.</p>
-  <div class="reach">
-    <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=919834380461&amp;text=Hi%20Mrunal!%20%F0%9F%91%8B%20I%20just%20scrolled%20through%20your%20portfolio%20and%20loved%20it.%20I%27d%20like%20to%20talk%20about%20working%20together%20on%20my%20brand%27s%20social%20media.%20When%20can%20we%20chat%3F" target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#whatsapp"/></svg>
-      <span>Chat on WhatsApp</span>
-    </a>
-    <a class="btn btn-light" href="tel:+919834380461">+91 98343 80461</a>
-    <a class="btn btn-light" href="mailto:mrunaldesale21@gmail.com">mrunaldesale21@gmail.com</a>
-    <a class="btn btn-light btn-ig" href="https://www.instagram.com/mrunaldesale_" target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#instagram"/></svg>
-      <span>@mrunaldesale_</span>
-    </a>
+  <div class="footer__bar">
+    <span>©2026 MRUNAL — Social Media Manager</span>
+    <span class="footer__mid"><a href="https://www.instagram.com/mrunaldesale_" target="_blank" rel="noopener">Instagram</a><i></i><a href="https://api.whatsapp.com/send?phone=919834380461" target="_blank" rel="noopener">WhatsApp</a></span>
+    <span>Made with pink &amp; chaos</span>
   </div>
-  <p class="fine">© 2026 Mrunal · Social Media Manager</p>
+  <div class="footer__physics" id="footerPhysics" aria-hidden="true"></div>
 </footer>
 
 </main>
 
-<a class="wa-float" href="https://api.whatsapp.com/send?phone=919834380461&amp;text=Hi%20Mrunal!%20%F0%9F%91%8B%20I%20just%20scrolled%20through%20your%20portfolio%20and%20loved%20it.%20I%27d%20like%20to%20talk%20about%20working%20together%20on%20my%20brand%27s%20social%20media.%20When%20can%20we%20chat%3F" target="_blank" rel="noopener" aria-label="Chat with Mrunal on WhatsApp">
-  <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#whatsapp"/></svg>
-</a>
+<div class="cursor" id="cursor" aria-hidden="true">
+  <svg class="cursor__star" viewBox="0 0 100 100" width="40" height="40"><path d="M50 0C57 34 66 43 100 50C66 57 57 66 50 100C43 66 34 57 0 50C34 43 43 34 50 0Z"/></svg>
+</div>
 
-<dialog class="lightbox" aria-label="Image preview">
-  <button class="close" aria-label="Close preview">✕</button>
-  <img alt="">
-</dialog>
-
-<script>
-  // cut-paper lettering: each letter becomes its own slightly crooked piece
-  document.querySelectorAll('.cut').forEach(h => {
-    h.innerHTML = h.textContent.trim().split(/\s+/).map(w =>
-      `<span class="word" aria-hidden="true">${[...w].map(c => `<span>${c}</span>`).join('')}</span>`).join(' ');
-  });
-
-  const box = document.querySelector('.lightbox'), big = box.querySelector('img');
-  document.querySelectorAll('.shot').forEach(b => b.addEventListener('click', () => {
-    big.src = b.dataset.full; big.alt = b.querySelector('img').alt; box.showModal();
-  }));
-  box.addEventListener('click', () => box.close());
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/",
+  "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/index.js",
+  "gsap/ScrollTrigger": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/ScrollTrigger.js",
+  "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.mjs",
+  "matter-js": "https://cdn.jsdelivr.net/npm/matter-js@0.19.0/+esm"
+} }
 </script>
+<script type="module" src="js/main.js"></script>
 </body>
 </html>

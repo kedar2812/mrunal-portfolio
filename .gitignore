@@ -1,2 +1,12 @@
 .claude/
 .DS_Store
+
+# third-party reference material from inspo site (do not commit)
+docs/research/raw/
+docs/research/js/
+docs/research/components-src/
+assets/me/_upload/
+
+# raw photos and unprocessed AI edits (site uses assets/img)
+assets/me/WhatsApp Image *
+assets/edited/
