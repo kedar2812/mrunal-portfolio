@@ -6,7 +6,7 @@ const IMAGES = Array.from({ length: 9 }, (_, i) => `assets/img/hero/h0${i + 1}.j
 const THUMBS = Array.from({ length: 9 }, (_, i) => `assets/img/thumb/t0${i + 1}.jpg`);
 // vertical crop focus per image (0 = top, .5 = centre) — h02 is a portrait, keep her face in frame
 const FOCUS = [.5, .5, .5, .5, .5, .5, .5, .5, .5];
-const CFG = { autoplay: 2.5, wipe: 2.6, distortion: .15, noiseScale: 5.5 };
+const CFG = { autoplay: 1.5, wipe: 1.4, distortion: .15, noiseScale: 5.5 };
 
 const VERT = `attribute vec2 position;varying vec2 vUv;void main(){vUv=position*0.5+0.5;vUv.y=1.0-vUv.y;gl_Position=vec4(position,0.0,1.0);}`;
 const FRAG = `precision highp float;varying vec2 vUv;
