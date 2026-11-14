@@ -143,7 +143,17 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .about__para{margin:0;max-width:1080px;text-align:center;font:600 68px/72px var(--f-cond);color:var(--pink);will-change:transform,opacity}
 .about__para .w{display:inline-block;opacity:.16;transition:opacity .25s linear;white-space:pre}
 .about__para .w.hl{color:var(--butter)}
-.about__eyebrow{display:block;margin:0 auto 26px;width:max-content;font:600 20px/1 var(--f-cond);letter-spacing:.16em;text-transform:uppercase;color:var(--bg);background:var(--pink);padding:10px 16px;border-radius:999px;transform:rotate(-3deg)}
+.hello{display:flex;justify-content:center;margin:0 0 34px}
+.hello__bubble{position:relative;display:inline-flex;align-items:baseline;gap:12px;padding:10px 28px 14px 26px;background:var(--cream);border-radius:24px;
+  box-shadow:6px 6px 0 var(--pink);transform:rotate(-4deg);animation:helloWiggle 3.4s ease-in-out infinite;transform-origin:20% 100%}
+.hello__bubble::after{content:"";position:absolute;left:34px;bottom:-11px;width:24px;height:24px;background:var(--cream);border-radius:0 0 6px 0;transform:rotate(45deg) skew(8deg,8deg);box-shadow:5px 5px 0 var(--pink);z-index:-1}
+.hello__hi{font:400 34px/1 var(--f-script);color:var(--magenta);transform:translateY(-2px)}
+.hello__name{font:400 46px/1 var(--f-display);color:var(--bg);letter-spacing:-.01em}
+.hello__spark{position:absolute;right:-18px;top:-20px;width:38px;height:38px;fill:var(--butter);stroke:var(--bg);stroke-width:5;overflow:visible;animation:mSpin 6s linear infinite}
+.hello__spark--sm{right:auto;left:-14px;top:auto;bottom:-6px;width:20px;height:20px;fill:var(--pink);animation-duration:4s;animation-direction:reverse}
+@keyframes helloWiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(-1deg) translateY(-3px)}}
+@media (max-width:809px){.hello__hi{font-size:24px}.hello__name{font-size:32px}.hello__bubble{padding:8px 20px 11px;border-radius:18px}.hello{margin-bottom:24px}}
+@media (prefers-reduced-motion:reduce){.hello__bubble,.hello__spark{animation:none}}
 
 .about__after{position:relative;padding:120px var(--inset) 0;display:flex;flex-direction:column;align-items:center}
 .about__name{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:18px}
@@ -322,7 +332,17 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .wordmark{font-size:clamp(64px,21vw,140px)}
   .about__pin{height:240vh}
   .about__para{font-size:30px;line-height:33px}
-  .about__eyebrow{font-size:15px}
+  .hello{display:flex;justify-content:center;margin:0 0 34px}
+.hello__bubble{position:relative;display:inline-flex;align-items:baseline;gap:12px;padding:10px 28px 14px 26px;background:var(--cream);border-radius:24px;
+  box-shadow:6px 6px 0 var(--pink);transform:rotate(-4deg);animation:helloWiggle 3.4s ease-in-out infinite;transform-origin:20% 100%}
+.hello__bubble::after{content:"";position:absolute;left:34px;bottom:-11px;width:24px;height:24px;background:var(--cream);border-radius:0 0 6px 0;transform:rotate(45deg) skew(8deg,8deg);box-shadow:5px 5px 0 var(--pink);z-index:-1}
+.hello__hi{font:400 34px/1 var(--f-script);color:var(--magenta);transform:translateY(-2px)}
+.hello__name{font:400 46px/1 var(--f-display);color:var(--bg);letter-spacing:-.01em}
+.hello__spark{position:absolute;right:-18px;top:-20px;width:38px;height:38px;fill:var(--butter);stroke:var(--bg);stroke-width:5;overflow:visible;animation:mSpin 6s linear infinite}
+.hello__spark--sm{right:auto;left:-14px;top:auto;bottom:-6px;width:20px;height:20px;fill:var(--pink);animation-duration:4s;animation-direction:reverse}
+@keyframes helloWiggle{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(-1deg) translateY(-3px)}}
+@media (max-width:809px){.hello__hi{font-size:24px}.hello__name{font-size:32px}.hello__bubble{padding:8px 20px 11px;border-radius:18px}.hello{margin-bottom:24px}}
+@media (prefers-reduced-motion:reduce){.hello__bubble,.hello__spark{animation:none}}
   .about__after{padding-top:80px}
   .avatar__tag{right:-92px;font-size:14px}.avatar__tag--l{left:-98px}
   .script{font-size:64px;line-height:70px}
