@@ -235,7 +235,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .archive__head{position:sticky;top:0;height:100vh;height:100svh;display:grid;place-items:center;z-index:0}
 .archive__scroll{position:relative;height:1654px;margin-top:-100vh}
 .archive__sticky{position:sticky;top:0;height:100vh;height:100svh;display:grid;place-items:center;z-index:1}
-.archive__stack{position:relative;width:500px;height:600px}
+.archive__stack{position:absolute;left:50%;top:50%;width:500px;height:600px;margin:-300px 0 0 -250px}
 .arc{position:absolute;left:0;top:50px;width:500px;height:500px;margin:0;border-radius:32px;overflow:hidden;border:4px solid var(--cream);background:var(--magenta);will-change:transform,opacity}
 .arc img{width:100%;height:100%;object-fit:cover;border-radius:28px}
 .arc--front{top:0;height:600px;z-index:5;display:block}
@@ -324,12 +324,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   :root{--inset:6px}
   .nav{padding:18px 18px}
   .nav__logo{font-size:30px;line-height:30px}
-  .hero{--ts:40px;--ta:56px}
+  .hero{--ts:30px;--ta:46px}
   .thumbs{padding:0 10px 34px}
-  .thumb{margin:0 3px;border-radius:12px}
-  .thumb.is-active{margin:0 6px}
+  .thumb{margin:0 2px;border-radius:9px}
+  .thumb.is-active{margin:0 5px}
   .thumb__bar{bottom:8px}
-  .wordmark{font-size:clamp(64px,21vw,140px)}
+  .wordmark{font-size:15.5vw}
   .about__pin{height:240vh}
   .about__para{font-size:30px;line-height:33px}
   .hello{display:flex;justify-content:center;margin:0 0 34px}
@@ -344,7 +344,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 @media (max-width:809px){.hello__hi{font-size:24px}.hello__name{font-size:32px}.hello__bubble{padding:8px 20px 11px;border-radius:18px}.hello{margin-bottom:24px}}
 @media (prefers-reduced-motion:reduce){.hello__bubble,.hello__spark{animation:none}}
   .about__after{padding-top:80px}
-  .avatar__tag{right:-92px;font-size:14px}.avatar__tag--l{left:-98px}
+  .avatar__tag{right:-86px;font-size:14px;padding:7px 10px}.avatar__tag--l{right:auto;left:-84px}
   .script{font-size:64px;line-height:70px}
   .avatar{width:140px;height:140px}.avatar img{width:108px;height:108px}
   .brands{height:170px;margin-top:60px}
@@ -372,7 +372,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .footer{padding:100px 18px 0}
   .footer__mail{font-size:clamp(34px,11vw,60px)}
   .footer__nav{gap:18px}
-  .footer__bar{left:18px;right:18px;bottom:14px;flex-direction:column;align-items:flex-start;gap:6px;font-size:16px;line-height:18px}
+  .footer__bar{left:12px;right:12px;bottom:12px;flex-direction:column;align-items:flex-start;gap:6px;font-size:16px;line-height:18px;background:rgba(43,22,25,.92);padding:12px 14px;border-radius:14px;backdrop-filter:blur(6px)}
   .flower span{font-size:18px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -427,7 +427,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .foodie{padding:90px 16px 110px}
   .foodie__text{font-size:24px;line-height:27px}
   .foodie__chips li{font-size:17px}
-  .foodie__stage{height:420px}
+  .foodie__stage{height:360px}
   .foodie__photo{width:88%;border-width:4px;border-radius:22px}
   .foodie__badge{width:120px;height:120px;right:0;top:0}
   .foodie__badge span{font-size:13px}.foodie__badge b{font-size:26px}

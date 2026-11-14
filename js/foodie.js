@@ -22,8 +22,8 @@ export function initFoodie(register) {
     const W = stage.clientWidth, small = W < 700;
     stage.querySelectorAll('.ring').forEach(host => {
       const cfg = RINGS[host.dataset.ring], back = host.classList.contains('ring--back');
-      const size = cfg.size * (small ? .55 : Math.min(1, W / 900));
-      const R = W * cfg.rFactor * (small ? 1.02 : 1);
+      const size = cfg.size * (small ? .4 : Math.min(1, W / 900));
+      const R = W * cfg.rFactor * (small ? .74 : 1);
       ctx.font = `400 ${size}px Anton, Impact, sans-serif`;
       // fill the circumference with repeats of the phrase, measured glyph-by-glyph
       const circ = 2 * Math.PI * R, track = size * .06;

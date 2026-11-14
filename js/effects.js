@@ -191,7 +191,7 @@ export function initArchive(register) {
     const a = clamp((vh - r.top) / vh, 0, 1);
     stack.style.opacity = reduceMotion ? 1 : (.0 + a).toFixed(3);
     stack.style.transform = `${matchMedia('(max-width:809px)').matches ? 'scale(.56) ' : ''}scale(${(.9 + .1 * a).toFixed(4)})`;
-    const e = smooth(clamp((p - .08) / .8, 0, 1));
+    const e = smooth(clamp((p - .08) / .8, 0, 1)) * (innerWidth < 810 ? .62 : 1);
     cards.forEach(c => { c.n.style.transform = `translate3d(${(c.x * e).toFixed(1)}px,${(c.y * e).toFixed(1)}px,0) scale(${(1 + (c.s - 1) * e).toFixed(4)})`; });
   });
 }

@@ -54,7 +54,8 @@ export function initAbout(register) {
   const size = () => {
     W = card.clientWidth; H = card.clientHeight;
     const sc = clamp(Math.min(W / 1400, H / 820), .42, 1.1);
-    stickers.forEach(({ node, c }) => node.style.setProperty('--sz', (c.size * sc).toFixed(0) + 'px'));
+    const narrow = W < 600;
+    stickers.forEach(({ node, c }) => { node.style.setProperty('--sz', (c.size * sc).toFixed(0) + 'px'); node.style.left = (narrow ? 50 + (c.x - 50) * .78 : c.x) + '%'; node.style.top = (narrow ? 50 + (c.y - 50) * .9 : c.y) + '%'; });
   };
   size(); addEventListener('resize', size);
 
