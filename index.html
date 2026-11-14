@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mrunal — Creative Portfolio</title>
+<meta name="description" content="Creative portfolio of Mrunal, social media manager. Posts, reels and client demos for Cafe Uukii, Epic Burger, AURÉLA and Your Deli.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Londrina+Solid:wght@400;900&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- cut-paper shapes reused across the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="burst" viewBox="0 0 100 100">
+      <polygon points="50,0 58,28 80,8 72,34 100,30 78,48 98,66 72,64 80,92 58,72 48,100 40,72 16,90 26,64 0,62 22,48 2,26 28,32 22,6 42,26"/>
+    </symbol>
+    <symbol id="squiggle" viewBox="0 0 110 56">
+      <path d="M6 34 C12 4 36 2 30 24 S12 50 32 44 S56 6 62 24 S50 52 70 44 S94 12 104 22" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="rays" viewBox="0 0 60 50">
+      <path d="M8 30 L20 38 M26 8 L32 24 M52 12 L44 28" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="whatsapp" viewBox="0 0 32 32">
+      <path d="M16 3.5A12.5 12.5 0 0 0 5.2 22.3L3.5 28.5l6.4-1.7A12.5 12.5 0 1 0 16 3.5z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+      <path d="M11.3 10.4c.5-.5 1.3-.4 1.7.2l1.2 1.9c.3.5.2 1.1-.2 1.500l-.7.7c.9 1.7 2.3 3.1 4 4l.7-.7c.4-.4 1-.5 1.5-.2l1.9 1.200c.6.4.7 1.2.2 1.700l-.8.8c-.9.9-2.2 1.2-3.4.8-4-1.4-7.2-4.6-8.6-8.6-.4-1.2-.1-2.5.8-3.400z" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav">
+  <a class="logo" href="#top">mrunal</a>
+  <nav>
+    <a href="#hello">Hello</a>
+    <a href="#work">Work</a>
+    <a href="#skills">What I do</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero paper">
+  <svg class="doodle d1" aria-hidden="true"><use href="#squiggle"/></svg>
+  <svg class="doodle d2" aria-hidden="true"><use href="#squiggle"/></svg>
+
+  <div class="hero-copy">
+    <p class="label">Mrunal · Social Media Manager</p>
+    <h1 class="cut" aria-label="Creative Portfolio">Creative Portfolio</h1>
+    <p class="lede">I plan, design and write social content for food, lifestyle and skincare
+    brands. Six projects below, each with its Figma file.</p>
+    <a class="btn" href="#work">See my work</a>
+  </div>
+
+  <div class="hero-art">
+    <svg class="shape hero-burst" aria-hidden="true"><use href="#burst"/></svg>
+    <svg class="doodle rays" aria-hidden="true"><use href="#rays"/></svg>
+    <img class="cutout" src="assets/me/mrunal-pose-cutout.png" alt="Mrunal striking a playful pose">
+  </div>
+</section>
+
+<!-- ============ HELLO ============ -->
+<section class="hello paper" id="hello">
+  <div class="hello-copy">
+    <h2 class="cut" aria-label="Hello, I'm Mrunal">Hello, I'm Mrunal</h2>
+    <p>Bold type, good food, a little bit of chaos, and captions that sound like a person
+    wrote them. I take a brand from brief to finished post: the idea, the design in Figma
+    and the words that go with it.</p>
+  </div>
+  <div class="hello-art">
+    <svg class="doodle d3" aria-hidden="true"><use href="#squiggle"/></svg>
+    <div class="blob"><img src="assets/me/mrunal-smile-cutout.png" alt="Mrunal smiling"></div>
+    <svg class="shape hello-burst" aria-hidden="true"><use href="#burst"/></svg>
+  </div>
+</section>
+
+<!-- ============ WORK ============ -->
+<section class="work paper" id="work">
+  <svg class="shape work-burst" aria-hidden="true"><use href="#burst"/></svg>
+  <svg class="doodle d4" aria-hidden="true"><use href="#squiggle"/></svg>
+  <h2 class="cut big" aria-label="My Work">My Work</h2>
+
+  <!-- Your Deli -->
+  <div class="group-head">
+    <p class="label">Client demo</p>
+    <h3>Your Deli — three posts, built to the client's brief</h3>
+  </div>
+  <div class="cards">
+    <article class="card r1">
+      <button class="shot" data-full="assets/work/your-deli-big-sip.jpg"><img src="assets/work/your-deli-big-sip.jpg" alt="Your Deli post: Go on, take a big sip. Iced hazelnut cold brew." loading="lazy"></button>
+      <h4>Go on, take a big sip</h4>
+      <p>Drink launch post</p>
+      <a class="figma" href="https://www.figma.com/design/BOvdufWdNk09lsXKdH7FeQ/Your-Deli-%E2%80%93-Big-Sip-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
+    </article>
+    <article class="card r2">
+      <button class="shot" data-full="assets/work/your-deli-come-hungry.jpg"><img src="assets/work/your-deli-come-hungry.jpg" alt="Your Deli post: Come hungry. Pull up a chair, open till late." loading="lazy"></button>
+      <h4>Come hungry</h4>
+      <p>Brand hero post</p>
+      <a class="figma" href="https://www.figma.com/design/wJowNoxUanJiwmxpd2x99O/Your-Deli-%E2%80%93-Come-Hungry-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
+    </article>
+    <article class="card r3">
+      <button class="shot" data-full="assets/work/your-deli-hold-the-napkins.jpg"><img src="assets/work/your-deli-hold-the-napkins.jpg" alt="Your Deli post: Hold the napkins. Extra saucy, get messy." loading="lazy"></button>
+      <h4>Hold the napkins</h4>
+      <p>Burger promo post</p>
+      <a class="figma" href="https://www.figma.com/design/pSrAciupu6MvFk0HcNcUGS/Your-Deli-%E2%80%93-Hold-the-Napkins-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
+    </article>
+  </div>
+
+  <!-- Cafe Uukii -->
+  <div class="feature">
+    <article class="card r2">
+      <button class="shot" data-full="assets/work/cafe-uukii-ube-latte.jpg"><img src="assets/work/cafe-uukii-ube-latte.jpg" alt="Cafe Uukii ube latte post: Purple mood, all day long. Made with real ube." loading="lazy"></button>
+    </article>
+    <div class="feature-copy">
+      <p class="label">Café</p>
+      <h3 class="cut" aria-label="Cafe Uukii">Cafe Uukii</h3>
+      <p>Ube Latte launch post. Purple mood, all day long: one drink, one colour and
+      stickers that do the talking.</p>
+      <a class="figma" href="https://www.figma.com/design/s8g0Hib00Ihm2NqNK2C7wF/Cafe-Uukii-%E2%80%93-Ube-Latte" target="_blank" rel="noopener">Open in Figma ↗</a>
+    </div>
+  </div>
+
+  <!-- AURELA -->
+  <div class="feature flip">
+    <article class="card r1">
+      <button class="shot" data-full="assets/work/aurela-rose-glow.jpg"><img src="assets/work/aurela-rose-glow.jpg" alt="AURÉLA Rose Glow face wash post: Your daily skin care partner." loading="lazy"></button>
+    </article>
+    <div class="feature-copy">
+      <p class="label">Skincare</p>
+      <h3 class="cut" aria-label="Aurela">Aurela</h3>
+      <p>Rose Glow face wash post. "Your daily skin care partner", set in pink type on
+      a pink cream texture so the product sits right in the middle of it.</p>
+      <a class="figma" href="https://www.figma.com/design/N7TmVXRrqTjHwSNT3miaLS/AUR%C3%89LA-%E2%80%93-Rose-Glow-Post" target="_blank" rel="noopener">Open in Figma ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- Epic Burger -->
+<section class="reel paper">
+  <svg class="doodle d5" aria-hidden="true"><use href="#squiggle"/></svg>
+  <div class="reel-head">
+    <div>
+      <p class="label light">Reel</p>
+      <h3 class="cut" aria-label="Epic Burger">Epic Burger</h3>
+    </div>
+    <div>
+      <p>Smash Reel: five scenes that go from the grill to the order button.</p>
+      <a class="figma light" href="https://www.figma.com/design/WKyUhhcJBljBTh0O6npkmw/Epic-Burger-%E2%80%93-Smash-Reel." target="_blank" rel="noopener">Open in Figma ↗</a>
+    </div>
+  </div>
+  <div class="frames">
+    <button class="shot" data-full="assets/work/epic-burger-01-smashed.jpg"><img src="assets/work/epic-burger-01-smashed.jpg" alt="Epic Burger reel scene 1: Smashed, fresh on the grill." loading="lazy"><span>01</span></button>
+    <button class="shot" data-full="assets/work/epic-burger-02-juicy-messy-epic.jpg"><img src="assets/work/epic-burger-02-juicy-messy-epic.jpg" alt="Epic Burger reel scene 2: Juicy. Messy. Epic." loading="lazy"><span>02</span></button>
+    <button class="shot" data-full="assets/work/epic-burger-03-double-patty.jpg"><img src="assets/work/epic-burger-03-double-patty.jpg" alt="Epic Burger reel scene 3: Double patty. Double cheese." loading="lazy"><span>03</span></button>
+    <button class="shot" data-full="assets/work/epic-burger-04-every-single-bite.jpg"><img src="assets/work/epic-burger-04-every-single-bite.jpg" alt="Epic Burger reel scene 4: Every. Single. Bite." loading="lazy"><span>04</span></button>
+    <button class="shot" data-full="assets/work/epic-burger-05-end-card.jpg"><img src="assets/work/epic-burger-05-end-card.jpg" alt="Epic Burger reel end card: Best smash burgers in Pune, order on Zomato." loading="lazy"><span>05</span></button>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="skills paper" id="skills">
+  <svg class="shape skills-burst" aria-hidden="true"><use href="#burst"/></svg>
+  <svg class="doodle d6" aria-hidden="true"><use href="#squiggle"/></svg>
+  <h2 class="cut big" aria-label="What I Do">What I Do</h2>
+  <div class="cols">
+    <div><h3>Content strategy</h3><p>Monthly calendars, content pillars and a plan for what goes out when.</p></div>
+    <div><h3>Post &amp; reel design</h3><p>Statics, carousels and reel storyboards, designed in Figma to your brand.</p></div>
+    <div><h3>Captions &amp; copy</h3><p>Hooks, captions and calls to action in a voice that sounds like you.</p></div>
+    <div><h3>Client demos</h3><p>Sample posts mocked up to your brief before you commit.</p></div>
+  </div>
+  <div class="strip"><img src="assets/me/mrunal-1.jpg" alt="Mrunal smiling at a restaurant table" loading="lazy"></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<footer class="contact paper" id="contact">
+  <svg class="shape contact-burst" aria-hidden="true"><use href="#burst"/></svg>
+  <svg class="doodle d7" aria-hidden="true"><use href="#squiggle"/></svg>
+  <h2 class="cut big" aria-label="Let's Talk">Let's Talk</h2>
+  <p>Have a brand that needs a louder feed? Send me the brief.</p>
+  <div class="reach">
+    <a class="btn btn-wa" href="https://wa.me/919834380461?text=Hi%20Mrunal!%20%F0%9F%91%8B%20I%20just%20scrolled%20through%20your%20portfolio%20and%20loved%20it.%20I%27d%20like%20to%20talk%20about%20working%20together%20on%20my%20brand%27s%20social%20media.%20When%20can%20we%20chat%3F" target="_blank" rel="noopener">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#whatsapp"/></svg>
+      <span>Chat on WhatsApp</span>
+    </a>
+    <a class="btn btn-light" href="tel:+919834380461">+91 98343 80461</a>
+    <a class="btn btn-light" href="mailto:mrunaldesale21@gmail.com">mrunaldesale21@gmail.com</a>
+  </div>
+  <p class="fine">© 2026 Mrunal · Social Media Manager</p>
+</footer>
+
+</main>
+
+<a class="wa-float" href="https://wa.me/919834380461?text=Hi%20Mrunal!%20%F0%9F%91%8B%20I%20just%20scrolled%20through%20your%20portfolio%20and%20loved%20it.%20I%27d%20like%20to%20talk%20about%20working%20together%20on%20my%20brand%27s%20social%20media.%20When%20can%20we%20chat%3F" target="_blank" rel="noopener" aria-label="Chat with Mrunal on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#whatsapp"/></svg>
+</a>
+
+<dialog class="lightbox" aria-label="Image preview">
+  <button class="close" aria-label="Close preview">✕</button>
+  <img alt="">
+</dialog>
+
+<script>
+  // cut-paper lettering: each letter becomes its own slightly crooked piece
+  document.querySelectorAll('.cut').forEach(h => {
+    h.innerHTML = h.textContent.trim().split(/\s+/).map(w =>
+      `<span class="word" aria-hidden="true">${[...w].map(c => `<span>${c}</span>`).join('')}</span>`).join(' ');
+  });
+
+  const box = document.querySelector('.lightbox'), big = box.querySelector('img');
+  document.querySelectorAll('.shot').forEach(b => b.addEventListener('click', () => {
+    big.src = b.dataset.full; big.alt = b.querySelector('img').alt; box.showModal();
+  }));
+  box.addEventListener('click', () => box.close());
+</script>
+</body>
+</html>
