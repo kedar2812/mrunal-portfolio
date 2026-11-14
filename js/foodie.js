@@ -22,14 +22,23 @@ export function initFoodie(register) {
     const W = stage.clientWidth, small = W < 700;
     stage.querySelectorAll('.ring').forEach(host => {
       const cfg = RINGS[host.dataset.ring], back = host.classList.contains('ring--back');
-      const size = cfg.size * (small ? .4 : Math.min(1, W / 900));
+      let size = cfg.size * (small ? .4 : Math.min(1, W / 900));
       const R = W * cfg.rFactor * (small ? .74 : 1);
       ctx.font = `400 ${size}px Anton, Impact, sans-serif`;
       // fill the circumference with repeats of the phrase, measured glyph-by-glyph
       const circ = 2 * Math.PI * R, track = size * .06;
-      let chars = [], used = 0, k = 0;
-      while (used < circ - size * .4) { const c = cfg.text[k % cfg.text.length]; const w = ctx.measureText(c).width + track; if (used + w > circ) break; chars.push([c, w]); used += w; k++; }
-      const stretch = circ / used; // spread evenly so the loop closes seamlessly
+      // only ever use WHOLE copies of the phrase, so the loop never cuts a word in half
+      // pick the nearest whole number of copies, then resize the type (±20%) so they close the loop;
+      // any remainder is absorbed by a tiny spacing tweak
+      const unit0 = [...cfg.text].map(c => [c, ctx.measureText(c).width + track]);
+      const unitW0 = unit0.reduce((t, [, w]) => t + w, 0);
+      const reps = Math.max(1, Math.round(circ / unitW0));
+      const fit = Math.min(1.25, Math.max(.8, circ / (unitW0 * reps)));
+      size *= fit;
+      const unit = unit0.map(([c, w]) => [c, w * fit]);
+      const chars = Array.from({ length: reps }, () => unit).flat();
+      const used = unitW0 * fit * reps;
+      const stretch = circ / used;
       host.innerHTML = '';
       const tilt = document.createElement('div'); tilt.className = 'ring__tilt';
       tilt.style.transform = `rotateX(${cfg.rx}deg) rotateZ(${cfg.rz}deg)`;
